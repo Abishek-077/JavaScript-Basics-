@@ -142,3 +142,45 @@ document.getElementById('AbiIsLive').addEventListener('click',()=>{
     console.log("Abi is live");
 }
 );
+
+// example number 3
+document.getElementById('Start').addEventListener('click',()=>{
+    console.log("50 min Timer has started");
+}
+);
+
+// if u want it to have GUI then u can use the following code:
+<button id="Start">Click Me</button>
+
+
+//example number 4
+document.getElementById('Results').addEventListener("mouseover",()=>{
+    this.style.backgrounfColor = "light red";
+    
+});
+
+// HTML code for the above example
+<div id="box" style="width: 100px; height: 100px; background-color: lightblue;"></div>
+
+// example number 5: Keydown Event(Decting keypress)
+document.addEventListener('keydown',function(event){
+    console.log(`key pressed:${event.key}`)
+}
+);
+
+// examplenumbe 6: Removing EventListener
+
+function Youtube(){
+    alert("The Gratest Study With Me Channel In Youtube");
+}
+
+document.getElementById('Subscribe').addEventListener('Click',Youtube);
+    console.log("Thank you for subscribing");
+
+
+setTimeout(()=>{
+document.getElementById('Unsubscribe').removeEventListener('click',Youtube);
+    console.log("You have unsubscribed");
+},5000);
+
+
