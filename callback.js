@@ -1,19 +1,3 @@
-// // Learning to make variables in JavaScript
-// var name = "John Doe";
-// const pi = 3.14;
-// let salary = 1000;
-// let a = 10;
-// let b = 20;
-
-// // Learning to print values
-// console.log(name);  // Output: John Doe
-// console.log(pi);  // Output: 3.14
-// console.log(salary);  // Output: 1000
-// console.log(a + b);  // Output: 30
-// console.log(a - b);  // Output: -10
-// console.log(a * b);  // Output: 200
-// console.log(a / b);  // Output: 0.5
-// console.log(a % b);  // Output: 10
 
 // // FUNCTIONS IN JAVASCRIPT
 // // Function declaration
@@ -183,4 +167,66 @@ document.getElementById('Unsubscribe').removeEventListener('click',Youtube);
     console.log("You have unsubscribed");
 },5000);
 
+// 4 Array Methods (Higher Order Functions)
 
+//Example 1: Using map with a callback function
+
+const numbers = [1,2,3,4,5,6,7,8,9,10]; // Array of numbers
+const double = numbers.map(num=>num*2); // Doubles each number in the array
+console.log(double); // Output: [2,4,6,8,10,12,14,16,18,20]
+
+// Example 2:
+
+const family = ['Aanya', 'Vrindwan', 'Abrar', 'anushka']; // Array of names
+
+const message = family.map(name=>console.log(`Love You My Family ${name}`)); // Greets each family member
+console.log(family);
+// Output: Hello Aanya  Hello Vrindwan  Hello Abrar  Hello Anushka
+
+// Example 3: Using filter with a callback function
+
+// const Gods =['Dad','Mom']/ // Array of names
+// const parents =Gods.map(name=>console.log(`Love You My Family ${name}`)); // Greets each family member
+// console.log(parents);
+// Output: Hello Dad  Hello Mom
+
+// Example 4: Using filter with a callback function
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+const num =i.filter(num=>num%2==0); // Filters numbers greater than 3
+console.log(num); // Output: [4,6,8,10]
+
+// 5 Promises & Aysnc/Await(modern Approach to callbacks)
+
+// Example 1: romise with callback function
+function fetchData(callback){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve("Data is recieved from the server");
+        },2000).then(callback);
+    }
+    );
+};
+
+function displayData(data){
+    console.log("Display Data",data);
+}
+
+fetchData(displayData);// Output: Data is recieved from the server
+
+// promise with async/await
+
+// Example 2: Promise with async/await
+function fetchdata(callback){
+    return new Promise((resolve,reject)=>{
+        resolve("Your Data Is Successuly Fetched");
+        reject("Your Data is Not fetched Please check weather u have done any syntax error or not");
+    },2000).then(callback);
+}
+
+function displayData(data){
+    console.log("Your Data",data);
+}
+
+fetchData(callback);
