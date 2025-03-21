@@ -119,3 +119,13 @@ button.addEventListener("click",function(){
 //Events Type click, mouseover,mouseout,keydown,keyup,chnage,summit
 
 //Mouse vents example
+
+let button = document.getElementById("btn");
+button.addEventListener("mouseover",function(){
+    button.style.background ="red";
+
+});
+
+button.addEventListener("mouseout",function(){
+    button.style.background="yellow";
+})
